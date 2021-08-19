@@ -12,11 +12,9 @@ import android.provider.Settings;
 import android.view.Gravity;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.annotation.RequiresApi;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
-
 import org.schabi.newpipe.R;
 import org.schabi.newpipe.settings.NewPipeSettings;
 

@@ -4,10 +4,9 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-
+import icepick.State;
 import org.schabi.newpipe.BaseFragment;
 import org.schabi.newpipe.R;
 import org.schabi.newpipe.error.ErrorActivity;
@@ -16,8 +15,6 @@ import org.schabi.newpipe.error.ErrorPanelHelper;
 import org.schabi.newpipe.util.InfoCache;
 
 import java.util.concurrent.atomic.AtomicBoolean;
-
-import icepick.State;
 
 import static org.schabi.newpipe.ktx.ViewUtils.animate;
 

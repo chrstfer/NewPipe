@@ -1,7 +1,6 @@
 package org.schabi.newpipe.error;
 
 import android.app.Activity;
-
 import org.junit.Test;
 import org.schabi.newpipe.MainActivity;
 import org.schabi.newpipe.RouterActivity;

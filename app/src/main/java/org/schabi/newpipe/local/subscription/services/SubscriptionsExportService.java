@@ -22,9 +22,10 @@ package org.schabi.newpipe.local.subscription.services;
 import android.content.Intent;
 import android.net.Uri;
 import android.util.Log;
-
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
-
+import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers;
+import io.reactivex.rxjava3.functions.Function;
+import io.reactivex.rxjava3.schedulers.Schedulers;
 import org.reactivestreams.Subscriber;
 import org.reactivestreams.Subscription;
 import org.schabi.newpipe.App;
@@ -38,10 +39,6 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.List;
-
-import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers;
-import io.reactivex.rxjava3.functions.Function;
-import io.reactivex.rxjava3.schedulers.Schedulers;
 
 import static org.schabi.newpipe.MainActivity.DEBUG;
 

@@ -5,23 +5,15 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
+import io.reactivex.rxjava3.core.Observer;
+import io.reactivex.rxjava3.disposables.Disposable;
 import org.schabi.newpipe.R;
-import org.schabi.newpipe.player.playqueue.events.AppendEvent;
-import org.schabi.newpipe.player.playqueue.events.ErrorEvent;
-import org.schabi.newpipe.player.playqueue.events.MoveEvent;
-import org.schabi.newpipe.player.playqueue.events.PlayQueueEvent;
-import org.schabi.newpipe.player.playqueue.events.RemoveEvent;
-import org.schabi.newpipe.player.playqueue.events.SelectEvent;
+import org.schabi.newpipe.player.playqueue.events.*;
 import org.schabi.newpipe.util.FallbackViewHolder;
 
 import java.util.List;
-
-import io.reactivex.rxjava3.core.Observer;
-import io.reactivex.rxjava3.disposables.Disposable;
 
 /**
  * Created by Christian Schabesberger on 01.08.16.

@@ -2,9 +2,7 @@ package org.schabi.newpipe.database.playlist;
 
 import androidx.room.ColumnInfo;
 
-import static org.schabi.newpipe.database.playlist.model.PlaylistEntity.PLAYLIST_ID;
-import static org.schabi.newpipe.database.playlist.model.PlaylistEntity.PLAYLIST_NAME;
-import static org.schabi.newpipe.database.playlist.model.PlaylistEntity.PLAYLIST_THUMBNAIL_URL;
+import static org.schabi.newpipe.database.playlist.model.PlaylistEntity.*;
 
 public class PlaylistMetadataEntry implements PlaylistLocalItem {
     public static final String PLAYLIST_STREAM_COUNT = "streamCount";

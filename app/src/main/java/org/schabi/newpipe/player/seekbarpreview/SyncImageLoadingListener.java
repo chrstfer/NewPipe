@@ -2,7 +2,6 @@ package org.schabi.newpipe.player.seekbarpreview;
 
 import android.graphics.Bitmap;
 import android.view.View;
-
 import com.nostra13.universalimageloader.core.assist.FailReason;
 import com.nostra13.universalimageloader.core.listener.SimpleImageLoadingListener;
 

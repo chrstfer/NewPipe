@@ -25,14 +25,17 @@ import android.os.Build;
 import android.os.IBinder;
 import android.text.TextUtils;
 import android.widget.Toast;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 import androidx.core.app.ServiceCompat;
-
+import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers;
+import io.reactivex.rxjava3.core.Flowable;
+import io.reactivex.rxjava3.disposables.CompositeDisposable;
+import io.reactivex.rxjava3.functions.Function;
+import io.reactivex.rxjava3.processors.PublishProcessor;
 import org.reactivestreams.Publisher;
 import org.schabi.newpipe.R;
 import org.schabi.newpipe.error.ErrorActivity;
@@ -45,12 +48,6 @@ import org.schabi.newpipe.local.subscription.SubscriptionManager;
 import java.io.FileNotFoundException;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
-
-import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers;
-import io.reactivex.rxjava3.core.Flowable;
-import io.reactivex.rxjava3.disposables.CompositeDisposable;
-import io.reactivex.rxjava3.functions.Function;
-import io.reactivex.rxjava3.processors.PublishProcessor;
 
 public abstract class BaseImportExportService extends Service {
     protected final String TAG = this.getClass().getSimpleName();

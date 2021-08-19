@@ -1,16 +1,12 @@
 package org.schabi.newpipe.fragments.list.comments;
 
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.View;
-import android.view.ViewGroup;
+import android.view.*;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-
+import io.reactivex.rxjava3.core.Single;
+import io.reactivex.rxjava3.disposables.CompositeDisposable;
 import org.schabi.newpipe.R;
 import org.schabi.newpipe.error.UserAction;
 import org.schabi.newpipe.extractor.ListExtractor;
@@ -18,9 +14,6 @@ import org.schabi.newpipe.extractor.comments.CommentsInfo;
 import org.schabi.newpipe.fragments.list.BaseListInfoFragment;
 import org.schabi.newpipe.ktx.ViewUtils;
 import org.schabi.newpipe.util.ExtractorHelper;
-
-import io.reactivex.rxjava3.core.Single;
-import io.reactivex.rxjava3.disposables.CompositeDisposable;
 
 public class CommentsFragment extends BaseListInfoFragment<CommentsInfo> {
     private final CompositeDisposable disposables = new CompositeDisposable();

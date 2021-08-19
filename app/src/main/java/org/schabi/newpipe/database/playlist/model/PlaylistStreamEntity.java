@@ -4,14 +4,10 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.ForeignKey;
 import androidx.room.Index;
-
 import org.schabi.newpipe.database.stream.model.StreamEntity;
 
 import static androidx.room.ForeignKey.CASCADE;
-import static org.schabi.newpipe.database.playlist.model.PlaylistStreamEntity.JOIN_INDEX;
-import static org.schabi.newpipe.database.playlist.model.PlaylistStreamEntity.JOIN_PLAYLIST_ID;
-import static org.schabi.newpipe.database.playlist.model.PlaylistStreamEntity.JOIN_STREAM_ID;
-import static org.schabi.newpipe.database.playlist.model.PlaylistStreamEntity.PLAYLIST_STREAM_JOIN_TABLE;
+import static org.schabi.newpipe.database.playlist.model.PlaylistStreamEntity.*;
 
 @Entity(tableName = PLAYLIST_STREAM_JOIN_TABLE,
         primaryKeys = {JOIN_PLAYLIST_ID, JOIN_INDEX},

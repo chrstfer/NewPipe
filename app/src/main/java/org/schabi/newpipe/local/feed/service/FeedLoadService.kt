@@ -50,9 +50,7 @@ import org.schabi.newpipe.database.feed.model.FeedGroupEntity
 import org.schabi.newpipe.extractor.ListInfo
 import org.schabi.newpipe.extractor.stream.StreamInfoItem
 import org.schabi.newpipe.local.feed.FeedDatabaseManager
-import org.schabi.newpipe.local.feed.service.FeedEventManager.Event.ErrorResultEvent
-import org.schabi.newpipe.local.feed.service.FeedEventManager.Event.ProgressEvent
-import org.schabi.newpipe.local.feed.service.FeedEventManager.Event.SuccessResultEvent
+import org.schabi.newpipe.local.feed.service.FeedEventManager.Event.*
 import org.schabi.newpipe.local.feed.service.FeedEventManager.postEvent
 import org.schabi.newpipe.local.subscription.SubscriptionManager
 import org.schabi.newpipe.util.ExtractorHelper

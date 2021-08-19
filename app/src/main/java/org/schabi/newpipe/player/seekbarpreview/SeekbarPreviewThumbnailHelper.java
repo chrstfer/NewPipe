@@ -5,11 +5,9 @@ import android.graphics.Bitmap;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
-
 import androidx.annotation.IntDef;
 import androidx.annotation.NonNull;
 import androidx.preference.PreferenceManager;
-
 import org.schabi.newpipe.R;
 import org.schabi.newpipe.util.DeviceUtils;
 
@@ -19,9 +17,7 @@ import java.util.Optional;
 import java.util.function.IntSupplier;
 
 import static java.lang.annotation.RetentionPolicy.SOURCE;
-import static org.schabi.newpipe.player.seekbarpreview.SeekbarPreviewThumbnailHelper.SeekbarPreviewThumbnailType.HIGH_QUALITY;
-import static org.schabi.newpipe.player.seekbarpreview.SeekbarPreviewThumbnailHelper.SeekbarPreviewThumbnailType.LOW_QUALITY;
-import static org.schabi.newpipe.player.seekbarpreview.SeekbarPreviewThumbnailHelper.SeekbarPreviewThumbnailType.NONE;
+import static org.schabi.newpipe.player.seekbarpreview.SeekbarPreviewThumbnailHelper.SeekbarPreviewThumbnailType.*;
 
 /**
  * Helper for the seekbar preview.

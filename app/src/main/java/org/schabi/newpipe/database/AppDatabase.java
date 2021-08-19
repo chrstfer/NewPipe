@@ -3,7 +3,6 @@ package org.schabi.newpipe.database;
 import androidx.room.Database;
 import androidx.room.RoomDatabase;
 import androidx.room.TypeConverters;
-
 import org.schabi.newpipe.database.feed.dao.FeedDAO;
 import org.schabi.newpipe.database.feed.dao.FeedGroupDAO;
 import org.schabi.newpipe.database.feed.model.FeedEntity;

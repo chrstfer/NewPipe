@@ -1,9 +1,7 @@
 package org.schabi.newpipe.settings;
 
 import android.os.Bundle;
-
 import androidx.preference.Preference;
-
 import org.schabi.newpipe.App;
 import org.schabi.newpipe.CheckForNewAppVersion;
 import org.schabi.newpipe.MainActivity;

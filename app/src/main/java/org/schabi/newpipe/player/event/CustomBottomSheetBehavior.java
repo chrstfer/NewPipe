@@ -6,12 +6,9 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.FrameLayout;
-
 import androidx.annotation.NonNull;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
-
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
-
 import org.schabi.newpipe.R;
 
 import java.util.Arrays;

@@ -1,15 +1,10 @@
 package org.schabi.newpipe.database;
 
-import androidx.room.Dao;
-import androidx.room.Delete;
-import androidx.room.Insert;
-import androidx.room.OnConflictStrategy;
-import androidx.room.Update;
+import androidx.room.*;
+import io.reactivex.rxjava3.core.Flowable;
 
 import java.util.Collection;
 import java.util.List;
-
-import io.reactivex.rxjava3.core.Flowable;
 
 @Dao
 public interface BasicDAO<Entity> {

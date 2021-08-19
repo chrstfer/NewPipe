@@ -1,17 +1,12 @@
 package org.schabi.newpipe.util;
 
 import org.schabi.newpipe.streams.io.SharpInputStream;
+import org.schabi.newpipe.streams.io.StoredFileHelper;
 
-import java.io.BufferedInputStream;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 import java.util.zip.ZipOutputStream;
-
-import org.schabi.newpipe.streams.io.StoredFileHelper;
 
 /**
  * Created by Christian Schabesberger on 28.01.18.

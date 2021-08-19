@@ -2,16 +2,8 @@ package org.schabi.newpipe.util;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-
 import androidx.preference.PreferenceManager;
-
-import com.grack.nanojson.JsonArray;
-import com.grack.nanojson.JsonObject;
-import com.grack.nanojson.JsonParser;
-import com.grack.nanojson.JsonParserException;
-import com.grack.nanojson.JsonStringWriter;
-import com.grack.nanojson.JsonWriter;
-
+import com.grack.nanojson.*;
 import org.schabi.newpipe.R;
 import org.schabi.newpipe.extractor.ServiceList;
 import org.schabi.newpipe.extractor.services.peertube.PeertubeInstance;

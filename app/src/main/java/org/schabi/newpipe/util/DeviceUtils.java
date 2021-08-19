@@ -8,12 +8,10 @@ import android.os.BatteryManager;
 import android.os.Build;
 import android.util.TypedValue;
 import android.view.KeyEvent;
-
 import androidx.annotation.Dimension;
 import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
 import androidx.preference.PreferenceManager;
-
 import org.schabi.newpipe.App;
 import org.schabi.newpipe.R;
 

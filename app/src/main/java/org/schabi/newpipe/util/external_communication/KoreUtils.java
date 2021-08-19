@@ -1,11 +1,9 @@
 package org.schabi.newpipe.util.external_communication;
 
 import android.content.Context;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.preference.PreferenceManager;
-
 import org.schabi.newpipe.R;
 import org.schabi.newpipe.extractor.ServiceList;
 import org.schabi.newpipe.util.NavigationHelper;

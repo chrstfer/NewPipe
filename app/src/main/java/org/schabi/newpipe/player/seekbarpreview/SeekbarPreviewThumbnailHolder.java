@@ -3,21 +3,13 @@ package org.schabi.newpipe.player.seekbarpreview;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.util.Log;
-
 import androidx.annotation.NonNull;
-
 import com.google.common.base.Stopwatch;
 import com.nostra13.universalimageloader.core.ImageLoader;
-
 import org.schabi.newpipe.extractor.stream.Frameset;
 import org.schabi.newpipe.util.ImageDisplayConstants;
 
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
-import java.util.UUID;
+import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

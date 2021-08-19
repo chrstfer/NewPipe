@@ -3,25 +3,14 @@ package org.schabi.newpipe.info_list;
 import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
-
 import androidx.annotation.NonNull;
-
 import com.nostra13.universalimageloader.core.ImageLoader;
-
 import org.schabi.newpipe.extractor.InfoItem;
 import org.schabi.newpipe.extractor.channel.ChannelInfoItem;
 import org.schabi.newpipe.extractor.comments.CommentsInfoItem;
 import org.schabi.newpipe.extractor.playlist.PlaylistInfoItem;
 import org.schabi.newpipe.extractor.stream.StreamInfoItem;
-import org.schabi.newpipe.info_list.holder.ChannelInfoItemHolder;
-import org.schabi.newpipe.info_list.holder.ChannelMiniInfoItemHolder;
-import org.schabi.newpipe.info_list.holder.CommentsInfoItemHolder;
-import org.schabi.newpipe.info_list.holder.CommentsMiniInfoItemHolder;
-import org.schabi.newpipe.info_list.holder.InfoItemHolder;
-import org.schabi.newpipe.info_list.holder.PlaylistInfoItemHolder;
-import org.schabi.newpipe.info_list.holder.PlaylistMiniInfoItemHolder;
-import org.schabi.newpipe.info_list.holder.StreamInfoItemHolder;
-import org.schabi.newpipe.info_list.holder.StreamMiniInfoItemHolder;
+import org.schabi.newpipe.info_list.holder.*;
 import org.schabi.newpipe.local.history.HistoryRecordManager;
 import org.schabi.newpipe.util.OnClickGesture;
 

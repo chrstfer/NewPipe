@@ -5,18 +5,15 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Handler;
 import android.view.View;
-
 import com.google.android.material.snackbar.Snackbar;
-
 import org.schabi.newpipe.R;
-
-import java.util.ArrayList;
-
 import us.shandian.giga.get.FinishedMission;
 import us.shandian.giga.get.Mission;
 import us.shandian.giga.service.DownloadManager;
 import us.shandian.giga.service.DownloadManager.MissionIterator;
 import us.shandian.giga.ui.adapter.MissionAdapter;
+
+import java.util.ArrayList;
 
 public class Deleter {
     private static final int TIMEOUT = 5000;// ms

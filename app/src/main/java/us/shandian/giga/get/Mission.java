@@ -1,11 +1,10 @@
 package us.shandian.giga.get;
 
 import androidx.annotation.NonNull;
+import org.schabi.newpipe.streams.io.StoredFileHelper;
 
 import java.io.Serializable;
 import java.util.Calendar;
-
-import org.schabi.newpipe.streams.io.StoredFileHelper;
 
 public abstract class Mission implements Serializable {
     private static final long serialVersionUID = 1L;// last bump: 27 march 2019

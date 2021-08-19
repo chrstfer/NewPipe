@@ -1,10 +1,6 @@
 package org.schabi.newpipe.database.history.model;
 
-import androidx.room.ColumnInfo;
-import androidx.room.Entity;
-import androidx.room.Ignore;
-import androidx.room.Index;
-import androidx.room.PrimaryKey;
+import androidx.room.*;
 
 import java.time.OffsetDateTime;
 

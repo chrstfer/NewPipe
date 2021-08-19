@@ -4,11 +4,10 @@ import android.app.Dialog;
 import android.os.Bundle;
 import android.text.InputType;
 import android.widget.Toast;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
-
+import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers;
 import org.schabi.newpipe.NewPipeDatabase;
 import org.schabi.newpipe.R;
 import org.schabi.newpipe.database.stream.model.StreamEntity;
@@ -16,8 +15,6 @@ import org.schabi.newpipe.databinding.DialogEditTextBinding;
 import org.schabi.newpipe.local.playlist.LocalPlaylistManager;
 
 import java.util.List;
-
-import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers;
 
 public final class PlaylistCreationDialog extends PlaylistDialog {
     public static PlaylistCreationDialog newInstance(final List<StreamEntity> streams) {

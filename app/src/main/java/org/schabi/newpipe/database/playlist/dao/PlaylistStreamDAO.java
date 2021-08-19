@@ -3,7 +3,7 @@ package org.schabi.newpipe.database.playlist.dao;
 import androidx.room.Dao;
 import androidx.room.Query;
 import androidx.room.Transaction;
-
+import io.reactivex.rxjava3.core.Flowable;
 import org.schabi.newpipe.database.BasicDAO;
 import org.schabi.newpipe.database.playlist.PlaylistMetadataEntry;
 import org.schabi.newpipe.database.playlist.PlaylistStreamEntry;
@@ -11,22 +11,13 @@ import org.schabi.newpipe.database.playlist.model.PlaylistStreamEntity;
 
 import java.util.List;
 
-import io.reactivex.rxjava3.core.Flowable;
-
 import static org.schabi.newpipe.database.playlist.PlaylistMetadataEntry.PLAYLIST_STREAM_COUNT;
-import static org.schabi.newpipe.database.playlist.model.PlaylistEntity.PLAYLIST_ID;
-import static org.schabi.newpipe.database.playlist.model.PlaylistEntity.PLAYLIST_NAME;
-import static org.schabi.newpipe.database.playlist.model.PlaylistEntity.PLAYLIST_TABLE;
-import static org.schabi.newpipe.database.playlist.model.PlaylistEntity.PLAYLIST_THUMBNAIL_URL;
-import static org.schabi.newpipe.database.playlist.model.PlaylistStreamEntity.JOIN_INDEX;
-import static org.schabi.newpipe.database.playlist.model.PlaylistStreamEntity.JOIN_PLAYLIST_ID;
+import static org.schabi.newpipe.database.playlist.model.PlaylistEntity.*;
 import static org.schabi.newpipe.database.playlist.model.PlaylistStreamEntity.JOIN_STREAM_ID;
-import static org.schabi.newpipe.database.playlist.model.PlaylistStreamEntity.PLAYLIST_STREAM_JOIN_TABLE;
+import static org.schabi.newpipe.database.playlist.model.PlaylistStreamEntity.*;
 import static org.schabi.newpipe.database.stream.model.StreamEntity.STREAM_ID;
 import static org.schabi.newpipe.database.stream.model.StreamEntity.STREAM_TABLE;
-import static org.schabi.newpipe.database.stream.model.StreamStateEntity.JOIN_STREAM_ID_ALIAS;
-import static org.schabi.newpipe.database.stream.model.StreamStateEntity.STREAM_PROGRESS_MILLIS;
-import static org.schabi.newpipe.database.stream.model.StreamStateEntity.STREAM_STATE_TABLE;
+import static org.schabi.newpipe.database.stream.model.StreamStateEntity.*;
 
 @Dao
 public interface PlaylistStreamDAO extends BasicDAO<PlaylistStreamEntity> {

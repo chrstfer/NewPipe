@@ -4,12 +4,7 @@ import android.content.SharedPreferences
 import org.schabi.newpipe.streams.io.SharpOutputStream
 import org.schabi.newpipe.streams.io.StoredFileHelper
 import org.schabi.newpipe.util.ZipHelper
-import java.io.BufferedOutputStream
-import java.io.FileInputStream
-import java.io.FileOutputStream
-import java.io.IOException
-import java.io.ObjectInputStream
-import java.io.ObjectOutputStream
+import java.io.*
 import java.util.zip.ZipOutputStream
 
 class ContentSettingsManager(private val fileLocator: NewPipeFileLocator) {

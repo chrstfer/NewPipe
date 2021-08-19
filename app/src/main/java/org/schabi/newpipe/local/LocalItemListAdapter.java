@@ -4,24 +4,14 @@ import android.content.Context;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import org.schabi.newpipe.database.LocalItem;
 import org.schabi.newpipe.database.stream.model.StreamStateEntity;
 import org.schabi.newpipe.local.history.HistoryRecordManager;
-import org.schabi.newpipe.local.holder.LocalItemHolder;
-import org.schabi.newpipe.local.holder.LocalPlaylistGridItemHolder;
-import org.schabi.newpipe.local.holder.LocalPlaylistItemHolder;
-import org.schabi.newpipe.local.holder.LocalPlaylistStreamGridItemHolder;
-import org.schabi.newpipe.local.holder.LocalPlaylistStreamItemHolder;
-import org.schabi.newpipe.local.holder.LocalStatisticStreamGridItemHolder;
-import org.schabi.newpipe.local.holder.LocalStatisticStreamItemHolder;
-import org.schabi.newpipe.local.holder.RemotePlaylistGridItemHolder;
-import org.schabi.newpipe.local.holder.RemotePlaylistItemHolder;
+import org.schabi.newpipe.local.holder.*;
 import org.schabi.newpipe.util.FallbackViewHolder;
 import org.schabi.newpipe.util.Localization;
 import org.schabi.newpipe.util.OnClickGesture;

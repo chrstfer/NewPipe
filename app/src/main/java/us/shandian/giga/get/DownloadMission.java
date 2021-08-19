@@ -5,31 +5,19 @@ import android.os.Handler;
 import android.system.ErrnoException;
 import android.system.OsConstants;
 import android.util.Log;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-
 import org.schabi.newpipe.DownloaderImpl;
-
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InterruptedIOException;
-import java.io.Serializable;
-import java.net.ConnectException;
-import java.net.HttpURLConnection;
-import java.net.SocketTimeoutException;
-import java.net.URL;
-import java.net.UnknownHostException;
-import java.nio.channels.ClosedByInterruptException;
-import java.util.Objects;
-
-import javax.net.ssl.SSLException;
-
 import org.schabi.newpipe.streams.io.StoredFileHelper;
 import us.shandian.giga.postprocessing.Postprocessing;
 import us.shandian.giga.service.DownloadManagerService;
 import us.shandian.giga.util.Utility;
+
+import javax.net.ssl.SSLException;
+import java.io.*;
+import java.net.*;
+import java.nio.channels.ClosedByInterruptException;
+import java.util.Objects;
 
 import static org.schabi.newpipe.BuildConfig.DEBUG;
 

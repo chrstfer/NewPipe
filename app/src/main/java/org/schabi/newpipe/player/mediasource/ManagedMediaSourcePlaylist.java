@@ -1,10 +1,8 @@
 package org.schabi.newpipe.player.mediasource;
 
 import android.os.Handler;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-
 import com.google.android.exoplayer2.source.ConcatenatingMediaSource;
 import com.google.android.exoplayer2.source.ShuffleOrder;
 

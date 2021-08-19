@@ -1,10 +1,8 @@
 package org.schabi.newpipe.player.mediasource;
 
 import android.os.Handler;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-
 import com.google.android.exoplayer2.MediaItem;
 import com.google.android.exoplayer2.drm.DrmSessionEventListener;
 import com.google.android.exoplayer2.source.MediaPeriod;
@@ -12,7 +10,6 @@ import com.google.android.exoplayer2.source.MediaSource;
 import com.google.android.exoplayer2.source.MediaSourceEventListener;
 import com.google.android.exoplayer2.upstream.Allocator;
 import com.google.android.exoplayer2.upstream.TransferListener;
-
 import org.schabi.newpipe.player.playqueue.PlayQueueItem;
 
 import java.io.IOException;

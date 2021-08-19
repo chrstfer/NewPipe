@@ -1,15 +1,14 @@
 package org.schabi.newpipe.local.playlist;
 
+import io.reactivex.rxjava3.core.Flowable;
+import io.reactivex.rxjava3.core.Single;
+import io.reactivex.rxjava3.schedulers.Schedulers;
 import org.schabi.newpipe.database.AppDatabase;
 import org.schabi.newpipe.database.playlist.dao.PlaylistRemoteDAO;
 import org.schabi.newpipe.database.playlist.model.PlaylistRemoteEntity;
 import org.schabi.newpipe.extractor.playlist.PlaylistInfo;
 
 import java.util.List;
-
-import io.reactivex.rxjava3.core.Flowable;
-import io.reactivex.rxjava3.core.Single;
-import io.reactivex.rxjava3.schedulers.Schedulers;
 
 public class RemotePlaylistManager {
 

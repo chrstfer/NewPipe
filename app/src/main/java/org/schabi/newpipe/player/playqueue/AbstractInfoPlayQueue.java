@@ -1,9 +1,9 @@
 package org.schabi.newpipe.player.playqueue;
 
 import android.util.Log;
-
 import androidx.annotation.NonNull;
-
+import io.reactivex.rxjava3.core.SingleObserver;
+import io.reactivex.rxjava3.disposables.Disposable;
 import org.schabi.newpipe.extractor.InfoItem;
 import org.schabi.newpipe.extractor.ListExtractor;
 import org.schabi.newpipe.extractor.ListInfo;
@@ -13,9 +13,6 @@ import org.schabi.newpipe.extractor.stream.StreamInfoItem;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-
-import io.reactivex.rxjava3.core.SingleObserver;
-import io.reactivex.rxjava3.disposables.Disposable;
 
 abstract class AbstractInfoPlayQueue<T extends ListInfo, U extends InfoItem> extends PlayQueue {
     boolean isInitial;

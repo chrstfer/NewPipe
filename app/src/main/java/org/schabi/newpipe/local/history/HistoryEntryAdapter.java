@@ -1,11 +1,9 @@
 package org.schabi.newpipe.local.history;
 
 import android.content.Context;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
-
 import org.schabi.newpipe.util.Localization;
 
 import java.text.DateFormat;

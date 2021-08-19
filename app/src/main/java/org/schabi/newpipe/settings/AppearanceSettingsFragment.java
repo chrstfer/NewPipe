@@ -6,10 +6,8 @@ import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.widget.Toast;
-
 import androidx.core.app.ActivityCompat;
 import androidx.preference.Preference;
-
 import org.schabi.newpipe.R;
 import org.schabi.newpipe.util.Constants;
 import org.schabi.newpipe.util.ThemeHelper;

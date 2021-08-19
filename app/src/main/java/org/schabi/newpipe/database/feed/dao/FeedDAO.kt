@@ -1,11 +1,6 @@
 package org.schabi.newpipe.database.feed.dao
 
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.OnConflictStrategy
-import androidx.room.Query
-import androidx.room.Transaction
-import androidx.room.Update
+import androidx.room.*
 import io.reactivex.rxjava3.core.Flowable
 import org.schabi.newpipe.database.feed.model.FeedEntity
 import org.schabi.newpipe.database.feed.model.FeedLastUpdatedEntity

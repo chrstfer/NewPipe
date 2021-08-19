@@ -3,26 +3,20 @@ package org.schabi.newpipe.database.history.dao;
 import androidx.annotation.Nullable;
 import androidx.room.Dao;
 import androidx.room.Query;
-
+import io.reactivex.rxjava3.core.Flowable;
 import org.schabi.newpipe.database.history.model.StreamHistoryEntity;
 import org.schabi.newpipe.database.history.model.StreamHistoryEntry;
 import org.schabi.newpipe.database.stream.StreamStatisticsEntry;
 
 import java.util.List;
 
-import io.reactivex.rxjava3.core.Flowable;
-
 import static org.schabi.newpipe.database.history.model.StreamHistoryEntity.JOIN_STREAM_ID;
-import static org.schabi.newpipe.database.history.model.StreamHistoryEntity.STREAM_ACCESS_DATE;
-import static org.schabi.newpipe.database.history.model.StreamHistoryEntity.STREAM_HISTORY_TABLE;
-import static org.schabi.newpipe.database.history.model.StreamHistoryEntity.STREAM_REPEAT_COUNT;
+import static org.schabi.newpipe.database.history.model.StreamHistoryEntity.*;
 import static org.schabi.newpipe.database.stream.StreamStatisticsEntry.STREAM_LATEST_DATE;
 import static org.schabi.newpipe.database.stream.StreamStatisticsEntry.STREAM_WATCH_COUNT;
 import static org.schabi.newpipe.database.stream.model.StreamEntity.STREAM_ID;
 import static org.schabi.newpipe.database.stream.model.StreamEntity.STREAM_TABLE;
-import static org.schabi.newpipe.database.stream.model.StreamStateEntity.JOIN_STREAM_ID_ALIAS;
-import static org.schabi.newpipe.database.stream.model.StreamStateEntity.STREAM_PROGRESS_MILLIS;
-import static org.schabi.newpipe.database.stream.model.StreamStateEntity.STREAM_STATE_TABLE;
+import static org.schabi.newpipe.database.stream.model.StreamStateEntity.*;
 
 @Dao
 public abstract class StreamHistoryDAO implements HistoryDAO<StreamHistoryEntity> {

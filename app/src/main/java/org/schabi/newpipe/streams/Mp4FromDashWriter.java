@@ -1,12 +1,6 @@
 package org.schabi.newpipe.streams;
 
-import org.schabi.newpipe.streams.Mp4DashReader.Hdlr;
-import org.schabi.newpipe.streams.Mp4DashReader.Mdia;
-import org.schabi.newpipe.streams.Mp4DashReader.Mp4DashChunk;
-import org.schabi.newpipe.streams.Mp4DashReader.Mp4DashSample;
-import org.schabi.newpipe.streams.Mp4DashReader.Mp4Track;
-import org.schabi.newpipe.streams.Mp4DashReader.TrackKind;
-import org.schabi.newpipe.streams.Mp4DashReader.TrunEntry;
+import org.schabi.newpipe.streams.Mp4DashReader.*;
 import org.schabi.newpipe.streams.io.SharpStream;
 
 import java.io.IOException;

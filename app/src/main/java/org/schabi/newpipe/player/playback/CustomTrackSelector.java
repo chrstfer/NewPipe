@@ -3,10 +3,8 @@ package org.schabi.newpipe.player.playback;
 import android.content.Context;
 import android.text.TextUtils;
 import android.util.Pair;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-
 import com.google.android.exoplayer2.C;
 import com.google.android.exoplayer2.Format;
 import com.google.android.exoplayer2.RendererCapabilities.Capabilities;

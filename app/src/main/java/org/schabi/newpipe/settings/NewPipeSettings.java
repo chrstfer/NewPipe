@@ -4,10 +4,8 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Environment;
-
 import androidx.annotation.NonNull;
 import androidx.preference.PreferenceManager;
-
 import org.schabi.newpipe.R;
 import org.schabi.newpipe.util.DeviceUtils;
 

@@ -26,19 +26,16 @@ import android.os.Parcelable;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.widget.LinearLayout;
-
 import androidx.annotation.IntDef;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
-
+import icepick.Icepick;
+import icepick.State;
 import org.schabi.newpipe.ktx.ViewUtils;
 
 import java.lang.annotation.Retention;
 import java.util.ArrayList;
 import java.util.List;
-
-import icepick.Icepick;
-import icepick.State;
 
 import static java.lang.annotation.RetentionPolicy.SOURCE;
 import static org.schabi.newpipe.MainActivity.DEBUG;

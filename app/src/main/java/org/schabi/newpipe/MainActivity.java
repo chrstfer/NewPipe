@@ -20,28 +20,18 @@
 
 package org.schabi.newpipe;
 
-import android.content.BroadcastReceiver;
-import android.content.Context;
-import android.content.Intent;
-import android.content.IntentFilter;
-import android.content.SharedPreferences;
+import android.content.*;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.util.Log;
-import android.view.KeyEvent;
-import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
+import android.view.*;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.FrameLayout;
 import android.widget.Spinner;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -52,14 +42,8 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.preference.PreferenceManager;
-
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
-
-import org.schabi.newpipe.databinding.ActivityMainBinding;
-import org.schabi.newpipe.databinding.DrawerHeaderBinding;
-import org.schabi.newpipe.databinding.DrawerLayoutBinding;
-import org.schabi.newpipe.databinding.InstanceSpinnerLayoutBinding;
-import org.schabi.newpipe.databinding.ToolbarLayoutBinding;
+import org.schabi.newpipe.databinding.*;
 import org.schabi.newpipe.error.ErrorActivity;
 import org.schabi.newpipe.extractor.NewPipe;
 import org.schabi.newpipe.extractor.StreamingService;
@@ -73,18 +57,7 @@ import org.schabi.newpipe.player.Player;
 import org.schabi.newpipe.player.event.OnKeyDownListener;
 import org.schabi.newpipe.player.helper.PlayerHolder;
 import org.schabi.newpipe.player.playqueue.PlayQueue;
-import org.schabi.newpipe.util.Constants;
-import org.schabi.newpipe.util.DeviceUtils;
-import org.schabi.newpipe.util.KioskTranslator;
-import org.schabi.newpipe.util.Localization;
-import org.schabi.newpipe.util.NavigationHelper;
-import org.schabi.newpipe.util.PeertubeHelper;
-import org.schabi.newpipe.util.PermissionHelper;
-import org.schabi.newpipe.util.SerializedCache;
-import org.schabi.newpipe.util.ServiceHelper;
-import org.schabi.newpipe.util.StateSaver;
-import org.schabi.newpipe.util.TLSSocketFactoryCompat;
-import org.schabi.newpipe.util.ThemeHelper;
+import org.schabi.newpipe.util.*;
 import org.schabi.newpipe.views.FocusOverlayView;
 
 import java.util.ArrayList;

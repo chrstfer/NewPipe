@@ -4,7 +4,6 @@ import android.content.Context;
 import android.net.wifi.WifiManager;
 import android.os.PowerManager;
 import android.util.Log;
-
 import androidx.core.content.ContextCompat;
 
 public class LockManager {

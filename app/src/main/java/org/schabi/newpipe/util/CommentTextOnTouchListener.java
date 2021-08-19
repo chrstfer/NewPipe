@@ -9,11 +9,9 @@ import android.text.style.URLSpan;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.TextView;
-
-import org.schabi.newpipe.util.external_communication.ShareUtils;
-import org.schabi.newpipe.util.external_communication.InternalUrlsHandler;
-
 import io.reactivex.rxjava3.disposables.CompositeDisposable;
+import org.schabi.newpipe.util.external_communication.InternalUrlsHandler;
+import org.schabi.newpipe.util.external_communication.ShareUtils;
 
 public class CommentTextOnTouchListener implements View.OnTouchListener {
     public static final CommentTextOnTouchListener INSTANCE = new CommentTextOnTouchListener();

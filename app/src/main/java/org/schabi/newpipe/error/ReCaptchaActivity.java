@@ -10,7 +10,6 @@ import android.view.MenuItem;
 import android.webkit.CookieManager;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
@@ -18,11 +17,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.NavUtils;
 import androidx.preference.PreferenceManager;
 import androidx.webkit.WebViewClientCompat;
-
-import org.schabi.newpipe.databinding.ActivityRecaptchaBinding;
 import org.schabi.newpipe.DownloaderImpl;
 import org.schabi.newpipe.MainActivity;
 import org.schabi.newpipe.R;
+import org.schabi.newpipe.databinding.ActivityRecaptchaBinding;
 import org.schabi.newpipe.util.ThemeHelper;
 
 import java.io.UnsupportedEncodingException;

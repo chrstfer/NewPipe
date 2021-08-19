@@ -2,21 +2,15 @@ package org.schabi.newpipe.player;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-
 import androidx.annotation.DrawableRes;
 import androidx.annotation.IntDef;
 import androidx.annotation.NonNull;
-
 import org.schabi.newpipe.R;
 import org.schabi.newpipe.util.Localization;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.SortedSet;
-import java.util.TreeSet;
+import java.util.*;
 
 public final class NotificationConstants {
 

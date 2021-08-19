@@ -9,27 +9,20 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.preference.PreferenceManager;
-
+import de.hdodenhof.circleimageview.CircleImageView;
 import org.schabi.newpipe.R;
 import org.schabi.newpipe.error.ErrorActivity;
 import org.schabi.newpipe.extractor.InfoItem;
 import org.schabi.newpipe.extractor.comments.CommentsInfoItem;
 import org.schabi.newpipe.info_list.InfoItemBuilder;
 import org.schabi.newpipe.local.history.HistoryRecordManager;
-import org.schabi.newpipe.util.CommentTextOnTouchListener;
-import org.schabi.newpipe.util.DeviceUtils;
-import org.schabi.newpipe.util.ImageDisplayConstants;
-import org.schabi.newpipe.util.Localization;
-import org.schabi.newpipe.util.NavigationHelper;
+import org.schabi.newpipe.util.*;
 import org.schabi.newpipe.util.external_communication.ShareUtils;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
-import de.hdodenhof.circleimageview.CircleImageView;
 
 public class CommentsMiniInfoItemHolder extends InfoItemHolder {
     private static final int COMMENT_DEFAULT_LINES = 2;

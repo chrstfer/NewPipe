@@ -7,9 +7,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ProgressBar;
-
 import androidx.appcompat.content.res.AppCompatResources;
-
 import org.jetbrains.annotations.NotNull;
 import org.schabi.newpipe.MainActivity;
 import org.schabi.newpipe.R;
@@ -20,9 +18,7 @@ import org.schabi.newpipe.player.helper.PlayerHelper;
 import static org.schabi.newpipe.ktx.AnimationType.ALPHA;
 import static org.schabi.newpipe.ktx.AnimationType.SCALE_AND_ALPHA;
 import static org.schabi.newpipe.ktx.ViewUtils.animate;
-import static org.schabi.newpipe.player.Player.DEFAULT_CONTROLS_DURATION;
-import static org.schabi.newpipe.player.Player.DEFAULT_CONTROLS_HIDE_TIME;
-import static org.schabi.newpipe.player.Player.STATE_PLAYING;
+import static org.schabi.newpipe.player.Player.*;
 
 /**
  * GestureListener for the player

@@ -2,7 +2,7 @@ package org.schabi.newpipe.info_list.holder;
 
 import android.view.ViewGroup;
 import android.widget.TextView;
-
+import de.hdodenhof.circleimageview.CircleImageView;
 import org.schabi.newpipe.R;
 import org.schabi.newpipe.extractor.InfoItem;
 import org.schabi.newpipe.extractor.channel.ChannelInfoItem;
@@ -10,8 +10,6 @@ import org.schabi.newpipe.info_list.InfoItemBuilder;
 import org.schabi.newpipe.local.history.HistoryRecordManager;
 import org.schabi.newpipe.util.ImageDisplayConstants;
 import org.schabi.newpipe.util.Localization;
-
-import de.hdodenhof.circleimageview.CircleImageView;
 
 public class ChannelMiniInfoItemHolder extends InfoItemHolder {
     public final CircleImageView itemThumbnailView;

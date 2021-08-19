@@ -2,7 +2,6 @@ package org.schabi.newpipe.player.playback;
 
 import android.content.Context;
 import android.view.SurfaceHolder;
-
 import com.google.android.exoplayer2.SimpleExoPlayer;
 import com.google.android.exoplayer2.video.DummySurface;
 

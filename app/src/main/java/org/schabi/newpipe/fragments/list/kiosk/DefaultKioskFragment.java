@@ -1,7 +1,6 @@
 package org.schabi.newpipe.fragments.list.kiosk;
 
 import android.os.Bundle;
-
 import org.schabi.newpipe.error.ErrorInfo;
 import org.schabi.newpipe.error.UserAction;
 import org.schabi.newpipe.extractor.NewPipe;

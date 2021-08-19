@@ -3,17 +3,13 @@ package org.schabi.newpipe.fragments.list.videos;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.View;
-import android.view.ViewGroup;
-
+import android.view.*;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.preference.PreferenceManager;
 import androidx.viewbinding.ViewBinding;
-
+import io.reactivex.rxjava3.core.Single;
+import io.reactivex.rxjava3.disposables.CompositeDisposable;
 import org.schabi.newpipe.R;
 import org.schabi.newpipe.databinding.RelatedItemsHeaderBinding;
 import org.schabi.newpipe.error.UserAction;
@@ -24,9 +20,6 @@ import org.schabi.newpipe.ktx.ViewUtils;
 import org.schabi.newpipe.util.RelatedItemInfo;
 
 import java.io.Serializable;
-
-import io.reactivex.rxjava3.core.Single;
-import io.reactivex.rxjava3.disposables.CompositeDisposable;
 
 public class RelatedItemsFragment extends BaseListInfoFragment<RelatedItemInfo>
         implements SharedPreferences.OnSharedPreferenceChangeListener {

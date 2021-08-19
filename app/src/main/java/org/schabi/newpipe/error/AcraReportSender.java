@@ -1,9 +1,7 @@
 package org.schabi.newpipe.error;
 
 import android.content.Context;
-
 import androidx.annotation.NonNull;
-
 import org.acra.ReportField;
 import org.acra.data.CrashReportData;
 import org.acra.sender.ReportSender;

@@ -1,13 +1,7 @@
 package org.schabi.newpipe.settings.tabs;
 
 import androidx.annotation.Nullable;
-
-import com.grack.nanojson.JsonArray;
-import com.grack.nanojson.JsonObject;
-import com.grack.nanojson.JsonParser;
-import com.grack.nanojson.JsonParserException;
-import com.grack.nanojson.JsonStringWriter;
-import com.grack.nanojson.JsonWriter;
+import com.grack.nanojson.*;
 
 import java.util.ArrayList;
 import java.util.Arrays;

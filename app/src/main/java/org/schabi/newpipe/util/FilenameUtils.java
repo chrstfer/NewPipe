@@ -2,9 +2,7 @@ package org.schabi.newpipe.util;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-
 import androidx.preference.PreferenceManager;
-
 import org.schabi.newpipe.R;
 
 import java.util.regex.Pattern;

@@ -11,7 +11,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-
 import androidx.activity.result.ActivityResult;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts.StartActivityForResult;
@@ -20,7 +19,7 @@ import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
 import androidx.appcompat.app.ActionBar;
 import androidx.core.text.util.LinkifyCompat;
-
+import icepick.State;
 import org.schabi.newpipe.BaseFragment;
 import org.schabi.newpipe.R;
 import org.schabi.newpipe.error.ErrorActivity;
@@ -37,13 +36,8 @@ import org.schabi.newpipe.util.ServiceHelper;
 import java.util.Collections;
 import java.util.List;
 
-import icepick.State;
-
 import static org.schabi.newpipe.extractor.subscription.SubscriptionExtractor.ContentSource.CHANNEL_URL;
-import static org.schabi.newpipe.local.subscription.services.SubscriptionsImportService.CHANNEL_URL_MODE;
-import static org.schabi.newpipe.local.subscription.services.SubscriptionsImportService.INPUT_STREAM_MODE;
-import static org.schabi.newpipe.local.subscription.services.SubscriptionsImportService.KEY_MODE;
-import static org.schabi.newpipe.local.subscription.services.SubscriptionsImportService.KEY_VALUE;
+import static org.schabi.newpipe.local.subscription.services.SubscriptionsImportService.*;
 
 public class SubscriptionsImportFragment extends BaseFragment {
     @State

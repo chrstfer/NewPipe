@@ -9,24 +9,20 @@ import android.os.Build;
 import android.os.Environment;
 import android.provider.DocumentsContract;
 import android.util.Log;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.documentfile.provider.DocumentFile;
-
 import com.nononsenseapps.filepicker.Utils;
-
 import org.schabi.newpipe.MainActivity;
 import org.schabi.newpipe.settings.NewPipeSettings;
 import org.schabi.newpipe.util.FilePickerActivityHelper;
+import us.shandian.giga.io.FileStream;
+import us.shandian.giga.io.FileStreamSAF;
 
 import java.io.File;
 import java.io.IOException;
 import java.io.Serializable;
 import java.net.URI;
-
-import us.shandian.giga.io.FileStream;
-import us.shandian.giga.io.FileStreamSAF;
 
 public class StoredFileHelper implements Serializable {
     private static final boolean DEBUG = MainActivity.DEBUG;

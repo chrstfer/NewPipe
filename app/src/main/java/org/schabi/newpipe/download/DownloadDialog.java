@@ -1,13 +1,8 @@
 package org.schabi.newpipe.download;
 
 import android.app.Activity;
-import android.content.ComponentName;
-import android.content.Context;
-import android.content.DialogInterface;
+import android.content.*;
 import android.content.DialogInterface.OnDismissListener;
-import android.content.Intent;
-import android.content.ServiceConnection;
-import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
@@ -21,7 +16,6 @@ import android.widget.AdapterView;
 import android.widget.RadioGroup;
 import android.widget.SeekBar;
 import android.widget.Toast;
-
 import androidx.activity.result.ActivityResult;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts.StartActivityForResult;
@@ -35,9 +29,10 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.documentfile.provider.DocumentFile;
 import androidx.fragment.app.DialogFragment;
 import androidx.preference.PreferenceManager;
-
 import com.nononsenseapps.filepicker.Utils;
-
+import icepick.Icepick;
+import icepick.State;
+import io.reactivex.rxjava3.disposables.CompositeDisposable;
 import org.schabi.newpipe.MainActivity;
 import org.schabi.newpipe.R;
 import org.schabi.newpipe.databinding.DownloadDialogBinding;
@@ -47,38 +42,24 @@ import org.schabi.newpipe.error.UserAction;
 import org.schabi.newpipe.extractor.MediaFormat;
 import org.schabi.newpipe.extractor.NewPipe;
 import org.schabi.newpipe.extractor.localization.Localization;
-import org.schabi.newpipe.extractor.stream.AudioStream;
-import org.schabi.newpipe.extractor.stream.Stream;
-import org.schabi.newpipe.extractor.stream.StreamInfo;
-import org.schabi.newpipe.extractor.stream.SubtitlesStream;
-import org.schabi.newpipe.extractor.stream.VideoStream;
+import org.schabi.newpipe.extractor.stream.*;
 import org.schabi.newpipe.settings.NewPipeSettings;
 import org.schabi.newpipe.streams.io.StoredDirectoryHelper;
 import org.schabi.newpipe.streams.io.StoredFileHelper;
-import org.schabi.newpipe.util.FilePickerActivityHelper;
-import org.schabi.newpipe.util.FilenameUtils;
-import org.schabi.newpipe.util.ListHelper;
-import org.schabi.newpipe.util.PermissionHelper;
-import org.schabi.newpipe.util.SecondaryStreamHelper;
-import org.schabi.newpipe.util.StreamItemAdapter;
+import org.schabi.newpipe.util.*;
 import org.schabi.newpipe.util.StreamItemAdapter.StreamSizeWrapper;
-import org.schabi.newpipe.util.ThemeHelper;
-
-import java.io.File;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Locale;
-
-import icepick.Icepick;
-import icepick.State;
-import io.reactivex.rxjava3.disposables.CompositeDisposable;
 import us.shandian.giga.get.MissionRecoveryInfo;
 import us.shandian.giga.postprocessing.Postprocessing;
 import us.shandian.giga.service.DownloadManager;
 import us.shandian.giga.service.DownloadManagerService;
 import us.shandian.giga.service.DownloadManagerService.DownloadManagerBinder;
 import us.shandian.giga.service.MissionState;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
 
 import static org.schabi.newpipe.util.Localization.assureCorrectAppLanguage;
 

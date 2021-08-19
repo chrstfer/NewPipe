@@ -2,10 +2,8 @@ package org.schabi.newpipe.local;
 
 import android.content.Context;
 import android.widget.ImageView;
-
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
-
 import org.schabi.newpipe.database.LocalItem;
 import org.schabi.newpipe.util.OnClickGesture;
 

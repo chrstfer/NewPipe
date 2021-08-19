@@ -1,7 +1,6 @@
 package us.shandian.giga.postprocessing;
 
 import android.util.Log;
-
 import org.schabi.newpipe.streams.SrtFromTtmlWriter;
 import org.schabi.newpipe.streams.io.SharpStream;
 

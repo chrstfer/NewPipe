@@ -4,9 +4,12 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
-
 import androidx.annotation.NonNull;
-
+import icepick.State;
+import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers;
+import io.reactivex.rxjava3.core.Single;
+import io.reactivex.rxjava3.disposables.Disposable;
+import io.reactivex.rxjava3.schedulers.Schedulers;
 import org.schabi.newpipe.error.ErrorInfo;
 import org.schabi.newpipe.error.UserAction;
 import org.schabi.newpipe.extractor.ListExtractor;
@@ -20,12 +23,6 @@ import org.schabi.newpipe.views.NewPipeRecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Queue;
-
-import icepick.State;
-import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers;
-import io.reactivex.rxjava3.core.Single;
-import io.reactivex.rxjava3.disposables.Disposable;
-import io.reactivex.rxjava3.schedulers.Schedulers;
 
 public abstract class BaseListInfoFragment<I extends ListInfo>
         extends BaseListFragment<I, ListExtractor.InfoItemsPage> {

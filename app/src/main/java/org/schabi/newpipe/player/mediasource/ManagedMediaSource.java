@@ -2,9 +2,7 @@ package org.schabi.newpipe.player.mediasource;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-
 import com.google.android.exoplayer2.source.MediaSource;
-
 import org.schabi.newpipe.player.playqueue.PlayQueueItem;
 
 public interface ManagedMediaSource extends MediaSource {

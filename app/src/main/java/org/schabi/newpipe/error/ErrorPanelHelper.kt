@@ -14,16 +14,7 @@ import io.reactivex.rxjava3.disposables.Disposable
 import org.schabi.newpipe.MainActivity
 import org.schabi.newpipe.R
 import org.schabi.newpipe.extractor.NewPipe
-import org.schabi.newpipe.extractor.exceptions.AccountTerminatedException
-import org.schabi.newpipe.extractor.exceptions.AgeRestrictedContentException
-import org.schabi.newpipe.extractor.exceptions.ContentNotAvailableException
-import org.schabi.newpipe.extractor.exceptions.ContentNotSupportedException
-import org.schabi.newpipe.extractor.exceptions.GeographicRestrictionException
-import org.schabi.newpipe.extractor.exceptions.PaidContentException
-import org.schabi.newpipe.extractor.exceptions.PrivateContentException
-import org.schabi.newpipe.extractor.exceptions.ReCaptchaException
-import org.schabi.newpipe.extractor.exceptions.SoundCloudGoPlusContentException
-import org.schabi.newpipe.extractor.exceptions.YoutubeMusicPremiumContentException
+import org.schabi.newpipe.extractor.exceptions.*
 import org.schabi.newpipe.extractor.utils.Utils.isNullOrEmpty
 import org.schabi.newpipe.ktx.animate
 import org.schabi.newpipe.ktx.isInterruptedCaused

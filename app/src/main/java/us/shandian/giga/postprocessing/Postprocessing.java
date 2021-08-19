@@ -1,24 +1,19 @@
 package us.shandian.giga.postprocessing;
 
 import android.util.Log;
-
 import androidx.annotation.NonNull;
-
 import org.schabi.newpipe.streams.io.SharpStream;
-
-import java.io.File;
-import java.io.IOException;
-import java.io.Serializable;
-
 import us.shandian.giga.get.DownloadMission;
 import us.shandian.giga.io.ChunkFileInputStream;
 import us.shandian.giga.io.CircularFileWriter;
 import us.shandian.giga.io.CircularFileWriter.OffsetChecker;
 import us.shandian.giga.io.ProgressReport;
 
-import static us.shandian.giga.get.DownloadMission.ERROR_NOTHING;
-import static us.shandian.giga.get.DownloadMission.ERROR_POSTPROCESSING;
-import static us.shandian.giga.get.DownloadMission.ERROR_POSTPROCESSING_HOLD;
+import java.io.File;
+import java.io.IOException;
+import java.io.Serializable;
+
+import static us.shandian.giga.get.DownloadMission.*;
 
 public abstract class Postprocessing implements Serializable {
 

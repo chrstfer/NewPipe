@@ -2,7 +2,6 @@ package org.schabi.newpipe.player.resolver;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-
 import org.schabi.newpipe.extractor.stream.StreamInfo;
 import org.schabi.newpipe.extractor.stream.VideoStream;
 

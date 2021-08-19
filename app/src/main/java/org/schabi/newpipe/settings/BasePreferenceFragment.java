@@ -3,14 +3,12 @@ package org.schabi.newpipe.settings;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.PreferenceManager;
-
 import org.schabi.newpipe.MainActivity;
 import org.schabi.newpipe.util.ThemeHelper;
 

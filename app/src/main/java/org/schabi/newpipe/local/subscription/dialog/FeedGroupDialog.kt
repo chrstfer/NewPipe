@@ -33,10 +33,7 @@ import org.schabi.newpipe.databinding.DialogFeedGroupCreateBinding
 import org.schabi.newpipe.databinding.ToolbarSearchLayoutBinding
 import org.schabi.newpipe.fragments.BackPressable
 import org.schabi.newpipe.local.subscription.FeedGroupIcon
-import org.schabi.newpipe.local.subscription.dialog.FeedGroupDialog.ScreenState.DeleteScreen
-import org.schabi.newpipe.local.subscription.dialog.FeedGroupDialog.ScreenState.IconPickerScreen
-import org.schabi.newpipe.local.subscription.dialog.FeedGroupDialog.ScreenState.InitialScreen
-import org.schabi.newpipe.local.subscription.dialog.FeedGroupDialog.ScreenState.SubscriptionsPickerScreen
+import org.schabi.newpipe.local.subscription.dialog.FeedGroupDialog.ScreenState.*
 import org.schabi.newpipe.local.subscription.dialog.FeedGroupDialogViewModel.DialogEvent.ProcessingEvent
 import org.schabi.newpipe.local.subscription.dialog.FeedGroupDialogViewModel.DialogEvent.SuccessEvent
 import org.schabi.newpipe.local.subscription.item.EmptyPlaceholderItem

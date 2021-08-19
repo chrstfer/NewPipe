@@ -2,7 +2,6 @@ package org.schabi.newpipe.player;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-
 import org.schabi.newpipe.player.playqueue.PlayQueue;
 
 import java.io.Serializable;

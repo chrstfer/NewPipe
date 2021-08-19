@@ -2,17 +2,12 @@ package org.schabi.newpipe.player.playqueue;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-
+import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers;
+import io.reactivex.rxjava3.core.BackpressureStrategy;
+import io.reactivex.rxjava3.core.Flowable;
+import io.reactivex.rxjava3.subjects.BehaviorSubject;
 import org.schabi.newpipe.MainActivity;
-import org.schabi.newpipe.player.playqueue.events.AppendEvent;
-import org.schabi.newpipe.player.playqueue.events.ErrorEvent;
-import org.schabi.newpipe.player.playqueue.events.InitEvent;
-import org.schabi.newpipe.player.playqueue.events.MoveEvent;
-import org.schabi.newpipe.player.playqueue.events.PlayQueueEvent;
-import org.schabi.newpipe.player.playqueue.events.RecoveryEvent;
-import org.schabi.newpipe.player.playqueue.events.RemoveEvent;
-import org.schabi.newpipe.player.playqueue.events.ReorderEvent;
-import org.schabi.newpipe.player.playqueue.events.SelectEvent;
+import org.schabi.newpipe.player.playqueue.events.*;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -20,11 +15,6 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
-
-import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers;
-import io.reactivex.rxjava3.core.BackpressureStrategy;
-import io.reactivex.rxjava3.core.Flowable;
-import io.reactivex.rxjava3.subjects.BehaviorSubject;
 
 /**
  * PlayQueue is responsible for keeping track of a list of streams and the index of

@@ -1,7 +1,6 @@
 package org.schabi.newpipe.streams;
 
 import androidx.annotation.NonNull;
-
 import org.schabi.newpipe.streams.WebMReader.Cluster;
 import org.schabi.newpipe.streams.WebMReader.Segment;
 import org.schabi.newpipe.streams.WebMReader.SimpleBlock;

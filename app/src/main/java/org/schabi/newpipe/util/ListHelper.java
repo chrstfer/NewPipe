@@ -3,23 +3,16 @@ package org.schabi.newpipe.util;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
-
 import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
 import androidx.core.content.ContextCompat;
 import androidx.preference.PreferenceManager;
-
 import org.schabi.newpipe.R;
 import org.schabi.newpipe.extractor.MediaFormat;
 import org.schabi.newpipe.extractor.stream.AudioStream;
 import org.schabi.newpipe.extractor.stream.VideoStream;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 public final class ListHelper {
     // Video format in order of quality. 0=lowest quality, n=highest quality

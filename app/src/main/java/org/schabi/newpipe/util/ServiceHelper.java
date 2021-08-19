@@ -2,15 +2,12 @@ package org.schabi.newpipe.util;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-
 import androidx.annotation.DrawableRes;
 import androidx.annotation.StringRes;
 import androidx.preference.PreferenceManager;
-
 import com.grack.nanojson.JsonObject;
 import com.grack.nanojson.JsonParser;
 import com.grack.nanojson.JsonParserException;
-
 import org.schabi.newpipe.R;
 import org.schabi.newpipe.extractor.NewPipe;
 import org.schabi.newpipe.extractor.ServiceList;

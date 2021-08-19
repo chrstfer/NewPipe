@@ -2,13 +2,11 @@ package org.schabi.newpipe.database.playlist.dao;
 
 import androidx.room.Dao;
 import androidx.room.Query;
-
+import io.reactivex.rxjava3.core.Flowable;
 import org.schabi.newpipe.database.BasicDAO;
 import org.schabi.newpipe.database.playlist.model.PlaylistEntity;
 
 import java.util.List;
-
-import io.reactivex.rxjava3.core.Flowable;
 
 import static org.schabi.newpipe.database.playlist.model.PlaylistEntity.PLAYLIST_ID;
 import static org.schabi.newpipe.database.playlist.model.PlaylistEntity.PLAYLIST_TABLE;

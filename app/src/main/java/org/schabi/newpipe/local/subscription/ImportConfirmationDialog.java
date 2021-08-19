@@ -3,17 +3,14 @@ package org.schabi.newpipe.local.subscription;
 import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
-
-import org.schabi.newpipe.R;
-
 import icepick.Icepick;
 import icepick.State;
+import org.schabi.newpipe.R;
 
 import static org.schabi.newpipe.util.Localization.assureCorrectAppLanguage;
 

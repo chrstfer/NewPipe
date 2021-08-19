@@ -6,30 +6,20 @@ import android.content.Context;
 import android.os.Build;
 import android.util.Log;
 import android.widget.Toast;
-
 import androidx.annotation.ColorInt;
 import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
-
 import org.schabi.newpipe.R;
 import org.schabi.newpipe.streams.io.SharpStream;
+import org.schabi.newpipe.streams.io.StoredFileHelper;
 
-import java.io.BufferedOutputStream;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
-import java.io.Serializable;
+import java.io.*;
 import java.net.HttpURLConnection;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Locale;
-
-import org.schabi.newpipe.streams.io.StoredFileHelper;
 
 public class Utility {
 

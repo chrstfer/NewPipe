@@ -20,11 +20,9 @@
 package org.schabi.newpipe.util;
 
 import android.util.Log;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.collection.LruCache;
-
 import org.schabi.newpipe.MainActivity;
 import org.schabi.newpipe.extractor.Info;
 import org.schabi.newpipe.extractor.InfoItem;

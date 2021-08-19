@@ -9,24 +9,21 @@ import android.text.util.Linkify;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.text.HtmlCompat;
-
-import org.schabi.newpipe.extractor.Info;
-import org.schabi.newpipe.extractor.stream.StreamInfo;
-import org.schabi.newpipe.util.NavigationHelper;
-
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 import io.noties.markwon.Markwon;
 import io.noties.markwon.linkify.LinkifyPlugin;
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers;
 import io.reactivex.rxjava3.core.Single;
 import io.reactivex.rxjava3.disposables.CompositeDisposable;
 import io.reactivex.rxjava3.schedulers.Schedulers;
+import org.schabi.newpipe.extractor.Info;
+import org.schabi.newpipe.extractor.stream.StreamInfo;
+import org.schabi.newpipe.util.NavigationHelper;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import static org.schabi.newpipe.util.external_communication.InternalUrlsHandler.playOnPopup;
 

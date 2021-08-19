@@ -6,7 +6,6 @@ import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.animation.Animation;
 import android.view.animation.Transformation;
 import android.widget.ProgressBar;
-
 import androidx.annotation.Nullable;
 
 public final class AnimatedProgressBar extends ProgressBar {

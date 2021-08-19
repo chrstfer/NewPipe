@@ -7,17 +7,15 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.net.Uri;
 import android.util.Log;
-
 import androidx.annotation.NonNull;
+import org.schabi.newpipe.streams.io.StoredFileHelper;
+import us.shandian.giga.get.DownloadMission;
+import us.shandian.giga.get.FinishedMission;
+import us.shandian.giga.get.Mission;
 
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Objects;
-
-import us.shandian.giga.get.DownloadMission;
-import us.shandian.giga.get.FinishedMission;
-import us.shandian.giga.get.Mission;
-import org.schabi.newpipe.streams.io.StoredFileHelper;
 
 /**
  * SQLite helper to store finished {@link us.shandian.giga.get.FinishedMission}'s

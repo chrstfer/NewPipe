@@ -1,19 +1,12 @@
 package org.schabi.newpipe.database.subscription;
 
 import androidx.annotation.NonNull;
-import androidx.room.ColumnInfo;
-import androidx.room.Entity;
-import androidx.room.Ignore;
-import androidx.room.Index;
-import androidx.room.PrimaryKey;
-
+import androidx.room.*;
 import org.schabi.newpipe.extractor.channel.ChannelInfo;
 import org.schabi.newpipe.extractor.channel.ChannelInfoItem;
 import org.schabi.newpipe.util.Constants;
 
-import static org.schabi.newpipe.database.subscription.SubscriptionEntity.SUBSCRIPTION_SERVICE_ID;
-import static org.schabi.newpipe.database.subscription.SubscriptionEntity.SUBSCRIPTION_TABLE;
-import static org.schabi.newpipe.database.subscription.SubscriptionEntity.SUBSCRIPTION_URL;
+import static org.schabi.newpipe.database.subscription.SubscriptionEntity.*;
 
 @Entity(tableName = SUBSCRIPTION_TABLE,
         indices = {@Index(value = {SUBSCRIPTION_SERVICE_ID, SUBSCRIPTION_URL}, unique = true)})

@@ -1,15 +1,12 @@
 package org.schabi.newpipe.settings.tabs;
 
 import android.content.Context;
-
 import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-
 import com.grack.nanojson.JsonObject;
 import com.grack.nanojson.JsonSink;
-
 import org.schabi.newpipe.R;
 import org.schabi.newpipe.database.LocalItem.LocalItemType;
 import org.schabi.newpipe.error.ErrorActivity;

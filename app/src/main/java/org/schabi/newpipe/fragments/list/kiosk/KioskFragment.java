@@ -1,16 +1,12 @@
 package org.schabi.newpipe.fragments.list.kiosk;
 
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.View;
-import android.view.ViewGroup;
-
+import android.view.*;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
-
+import icepick.State;
+import io.reactivex.rxjava3.core.Single;
 import org.schabi.newpipe.R;
 import org.schabi.newpipe.error.ErrorInfo;
 import org.schabi.newpipe.error.UserAction;
@@ -25,9 +21,6 @@ import org.schabi.newpipe.fragments.list.BaseListInfoFragment;
 import org.schabi.newpipe.util.ExtractorHelper;
 import org.schabi.newpipe.util.KioskTranslator;
 import org.schabi.newpipe.util.Localization;
-
-import icepick.State;
-import io.reactivex.rxjava3.core.Single;
 
 /**
  * Created by Christian Schabesberger on 23.09.17.

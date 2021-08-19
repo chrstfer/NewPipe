@@ -7,11 +7,8 @@ import android.os.Bundle;
 import android.provider.Settings;
 import android.text.format.DateUtils;
 import android.widget.Toast;
-
 import androidx.preference.ListPreference;
-
 import com.google.android.material.snackbar.Snackbar;
-
 import org.schabi.newpipe.R;
 import org.schabi.newpipe.util.PermissionHelper;
 

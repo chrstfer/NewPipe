@@ -23,9 +23,7 @@ import android.util.AttributeSet;
 import android.view.KeyEvent;
 import android.view.ViewTreeObserver;
 import android.widget.SeekBar;
-
 import androidx.appcompat.widget.AppCompatSeekBar;
-
 import org.schabi.newpipe.util.DeviceUtils;
 
 /**

@@ -3,10 +3,8 @@ package org.schabi.newpipe.player.mediasession;
 import android.os.Bundle;
 import android.os.ResultReceiver;
 import android.support.v4.media.session.MediaSessionCompat;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-
 import com.google.android.exoplayer2.ControlDispatcher;
 import com.google.android.exoplayer2.Player;
 import com.google.android.exoplayer2.ext.mediasession.MediaSessionConnector;
@@ -16,9 +14,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import static android.support.v4.media.session.PlaybackStateCompat.ACTION_SKIP_TO_NEXT;
-import static android.support.v4.media.session.PlaybackStateCompat.ACTION_SKIP_TO_PREVIOUS;
-import static android.support.v4.media.session.PlaybackStateCompat.ACTION_SKIP_TO_QUEUE_ITEM;
+import static android.support.v4.media.session.PlaybackStateCompat.*;
 
 public class PlayQueueNavigator implements MediaSessionConnector.QueueNavigator {
     public static final int DEFAULT_MAX_QUEUE_SIZE = 10;

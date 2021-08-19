@@ -1,9 +1,7 @@
 package org.schabi.newpipe.player.helper;
 
 import android.content.Context;
-
 import androidx.annotation.NonNull;
-
 import com.google.android.exoplayer2.source.ProgressiveMediaSource;
 import com.google.android.exoplayer2.source.SingleSampleMediaSource;
 import com.google.android.exoplayer2.source.dash.DashMediaSource;

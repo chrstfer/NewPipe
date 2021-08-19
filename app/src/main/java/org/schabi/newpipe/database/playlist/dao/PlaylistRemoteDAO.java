@@ -3,18 +3,13 @@ package org.schabi.newpipe.database.playlist.dao;
 import androidx.room.Dao;
 import androidx.room.Query;
 import androidx.room.Transaction;
-
+import io.reactivex.rxjava3.core.Flowable;
 import org.schabi.newpipe.database.BasicDAO;
 import org.schabi.newpipe.database.playlist.model.PlaylistRemoteEntity;
 
 import java.util.List;
 
-import io.reactivex.rxjava3.core.Flowable;
-
-import static org.schabi.newpipe.database.playlist.model.PlaylistRemoteEntity.REMOTE_PLAYLIST_ID;
-import static org.schabi.newpipe.database.playlist.model.PlaylistRemoteEntity.REMOTE_PLAYLIST_SERVICE_ID;
-import static org.schabi.newpipe.database.playlist.model.PlaylistRemoteEntity.REMOTE_PLAYLIST_TABLE;
-import static org.schabi.newpipe.database.playlist.model.PlaylistRemoteEntity.REMOTE_PLAYLIST_URL;
+import static org.schabi.newpipe.database.playlist.model.PlaylistRemoteEntity.*;
 
 @Dao
 public interface PlaylistRemoteDAO extends BasicDAO<PlaylistRemoteEntity> {

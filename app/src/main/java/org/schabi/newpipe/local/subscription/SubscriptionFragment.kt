@@ -1,18 +1,10 @@
 package org.schabi.newpipe.local.subscription
 
 import android.app.Activity
-import android.content.BroadcastReceiver
-import android.content.Context
-import android.content.DialogInterface
-import android.content.Intent
-import android.content.IntentFilter
+import android.content.*
 import android.os.Bundle
 import android.os.Parcelable
-import android.view.LayoutInflater
-import android.view.Menu
-import android.view.MenuInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import android.widget.Toast
 import androidx.activity.result.ActivityResult
 import androidx.activity.result.contract.ActivityResultContracts.StartActivityForResult
@@ -40,21 +32,12 @@ import org.schabi.newpipe.ktx.animate
 import org.schabi.newpipe.local.subscription.SubscriptionViewModel.SubscriptionState
 import org.schabi.newpipe.local.subscription.dialog.FeedGroupDialog
 import org.schabi.newpipe.local.subscription.dialog.FeedGroupReorderDialog
-import org.schabi.newpipe.local.subscription.item.ChannelItem
-import org.schabi.newpipe.local.subscription.item.EmptyPlaceholderItem
-import org.schabi.newpipe.local.subscription.item.FeedGroupAddItem
-import org.schabi.newpipe.local.subscription.item.FeedGroupCardItem
-import org.schabi.newpipe.local.subscription.item.FeedGroupCarouselItem
-import org.schabi.newpipe.local.subscription.item.FeedImportExportItem
-import org.schabi.newpipe.local.subscription.item.HeaderWithMenuItem
+import org.schabi.newpipe.local.subscription.item.*
 import org.schabi.newpipe.local.subscription.item.HeaderWithMenuItem.Companion.PAYLOAD_UPDATE_VISIBILITY_MENU_ITEM
 import org.schabi.newpipe.local.subscription.services.SubscriptionsExportService
 import org.schabi.newpipe.local.subscription.services.SubscriptionsExportService.EXPORT_COMPLETE_ACTION
 import org.schabi.newpipe.local.subscription.services.SubscriptionsImportService
-import org.schabi.newpipe.local.subscription.services.SubscriptionsImportService.IMPORT_COMPLETE_ACTION
-import org.schabi.newpipe.local.subscription.services.SubscriptionsImportService.KEY_MODE
-import org.schabi.newpipe.local.subscription.services.SubscriptionsImportService.KEY_VALUE
-import org.schabi.newpipe.local.subscription.services.SubscriptionsImportService.PREVIOUS_EXPORT_MODE
+import org.schabi.newpipe.local.subscription.services.SubscriptionsImportService.*
 import org.schabi.newpipe.streams.io.StoredFileHelper
 import org.schabi.newpipe.util.NavigationHelper
 import org.schabi.newpipe.util.OnClickGesture
@@ -62,8 +45,7 @@ import org.schabi.newpipe.util.ThemeHelper.getGridSpanCount
 import org.schabi.newpipe.util.ThemeHelper.shouldUseGridLayout
 import org.schabi.newpipe.util.external_communication.ShareUtils
 import java.text.SimpleDateFormat
-import java.util.Date
-import java.util.Locale
+import java.util.*
 
 class SubscriptionFragment : BaseStateFragment<SubscriptionState>() {
     private var _binding: FragmentSubscriptionBinding? = null

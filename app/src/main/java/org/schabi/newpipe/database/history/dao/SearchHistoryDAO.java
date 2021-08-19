@@ -3,18 +3,12 @@ package org.schabi.newpipe.database.history.dao;
 import androidx.annotation.Nullable;
 import androidx.room.Dao;
 import androidx.room.Query;
-
+import io.reactivex.rxjava3.core.Flowable;
 import org.schabi.newpipe.database.history.model.SearchHistoryEntry;
 
 import java.util.List;
 
-import io.reactivex.rxjava3.core.Flowable;
-
-import static org.schabi.newpipe.database.history.model.SearchHistoryEntry.CREATION_DATE;
-import static org.schabi.newpipe.database.history.model.SearchHistoryEntry.ID;
-import static org.schabi.newpipe.database.history.model.SearchHistoryEntry.SEARCH;
-import static org.schabi.newpipe.database.history.model.SearchHistoryEntry.SERVICE_ID;
-import static org.schabi.newpipe.database.history.model.SearchHistoryEntry.TABLE_NAME;
+import static org.schabi.newpipe.database.history.model.SearchHistoryEntry.*;
 
 @Dao
 public interface SearchHistoryDAO extends HistoryDAO<SearchHistoryEntry> {

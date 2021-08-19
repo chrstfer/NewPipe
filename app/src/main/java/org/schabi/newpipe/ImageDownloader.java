@@ -4,11 +4,8 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
-
 import androidx.preference.PreferenceManager;
-
 import com.nostra13.universalimageloader.core.download.BaseImageDownloader;
-
 import org.schabi.newpipe.extractor.NewPipe;
 
 import java.io.IOException;

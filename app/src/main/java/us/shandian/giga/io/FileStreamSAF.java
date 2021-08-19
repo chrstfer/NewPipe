@@ -4,9 +4,7 @@ import android.content.ContentResolver;
 import android.net.Uri;
 import android.os.ParcelFileDescriptor;
 import android.util.Log;
-
 import androidx.annotation.NonNull;
-
 import org.schabi.newpipe.streams.io.SharpStream;
 
 import java.io.FileInputStream;

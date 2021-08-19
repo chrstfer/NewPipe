@@ -2,9 +2,8 @@ package org.schabi.newpipe.util;
 
 import android.content.Context;
 import android.net.Uri;
-
 import androidx.fragment.app.Fragment;
-
+import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers;
 import org.schabi.newpipe.R;
 import org.schabi.newpipe.extractor.stream.StreamInfoItem;
 import org.schabi.newpipe.local.dialog.PlaylistAppendDialog;
@@ -18,8 +17,6 @@ import org.schabi.newpipe.util.external_communication.ShareUtils;
 
 import java.util.Collections;
 import java.util.List;
-
-import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers;
 
 import static org.schabi.newpipe.player.MainPlayer.PlayerType.AUDIO;
 import static org.schabi.newpipe.player.MainPlayer.PlayerType.POPUP;

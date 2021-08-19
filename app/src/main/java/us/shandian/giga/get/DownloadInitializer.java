@@ -2,17 +2,14 @@ package us.shandian.giga.get;
 
 import android.text.TextUtils;
 import android.util.Log;
-
 import androidx.annotation.NonNull;
-
 import org.schabi.newpipe.streams.io.SharpStream;
+import us.shandian.giga.util.Utility;
 
 import java.io.IOException;
 import java.io.InterruptedIOException;
 import java.net.HttpURLConnection;
 import java.nio.channels.ClosedByInterruptException;
-
-import us.shandian.giga.util.Utility;
 
 import static org.schabi.newpipe.BuildConfig.DEBUG;
 import static us.shandian.giga.get.DownloadMission.ERROR_HTTP_FORBIDDEN;

@@ -10,7 +10,6 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.View;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
@@ -18,7 +17,6 @@ import androidx.preference.PreferenceManager;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
-
 import org.schabi.newpipe.R;
 import org.schabi.newpipe.databinding.PignateFooterBinding;
 import org.schabi.newpipe.error.ErrorActivity;
@@ -33,11 +31,11 @@ import org.schabi.newpipe.fragments.OnScrollBelowItemsListener;
 import org.schabi.newpipe.info_list.InfoItemDialog;
 import org.schabi.newpipe.info_list.InfoListAdapter;
 import org.schabi.newpipe.player.helper.PlayerHolder;
-import org.schabi.newpipe.util.external_communication.KoreUtils;
 import org.schabi.newpipe.util.NavigationHelper;
 import org.schabi.newpipe.util.OnClickGesture;
 import org.schabi.newpipe.util.StateSaver;
 import org.schabi.newpipe.util.StreamDialogEntry;
+import org.schabi.newpipe.util.external_communication.KoreUtils;
 import org.schabi.newpipe.views.SuperScrollLayoutManager;
 
 import java.util.ArrayList;

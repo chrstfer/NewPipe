@@ -5,15 +5,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
 import androidx.appcompat.widget.TooltipCompat;
 import androidx.core.text.HtmlCompat;
-
 import com.google.android.material.chip.Chip;
-
+import icepick.State;
+import io.reactivex.rxjava3.disposables.CompositeDisposable;
 import org.schabi.newpipe.BaseFragment;
 import org.schabi.newpipe.R;
 import org.schabi.newpipe.databinding.FragmentDescriptionBinding;
@@ -29,9 +28,6 @@ import org.schabi.newpipe.util.external_communication.TextLinkifier;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-
-import icepick.State;
-import io.reactivex.rxjava3.disposables.CompositeDisposable;
 
 import static android.text.TextUtils.isEmpty;
 import static org.schabi.newpipe.extractor.stream.StreamExtractor.NO_AGE_LIMIT;

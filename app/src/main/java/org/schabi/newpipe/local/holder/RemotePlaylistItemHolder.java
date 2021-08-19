@@ -2,7 +2,6 @@ package org.schabi.newpipe.local.holder;
 
 import android.text.TextUtils;
 import android.view.ViewGroup;
-
 import org.schabi.newpipe.database.LocalItem;
 import org.schabi.newpipe.database.playlist.model.PlaylistRemoteEntity;
 import org.schabi.newpipe.extractor.NewPipe;

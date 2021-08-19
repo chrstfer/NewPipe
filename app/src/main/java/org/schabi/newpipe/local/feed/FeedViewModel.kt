@@ -14,10 +14,7 @@ import org.schabi.newpipe.database.feed.model.FeedGroupEntity
 import org.schabi.newpipe.database.stream.StreamWithState
 import org.schabi.newpipe.local.feed.item.StreamItem
 import org.schabi.newpipe.local.feed.service.FeedEventManager
-import org.schabi.newpipe.local.feed.service.FeedEventManager.Event.ErrorResultEvent
-import org.schabi.newpipe.local.feed.service.FeedEventManager.Event.IdleEvent
-import org.schabi.newpipe.local.feed.service.FeedEventManager.Event.ProgressEvent
-import org.schabi.newpipe.local.feed.service.FeedEventManager.Event.SuccessResultEvent
+import org.schabi.newpipe.local.feed.service.FeedEventManager.Event.*
 import org.schabi.newpipe.util.DEFAULT_THROTTLE_TIMEOUT
 import java.time.OffsetDateTime
 import java.util.concurrent.TimeUnit

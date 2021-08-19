@@ -1,7 +1,6 @@
 package org.schabi.newpipe.util;
 
 import android.content.Context;
-
 import org.schabi.newpipe.R;
 
 /**

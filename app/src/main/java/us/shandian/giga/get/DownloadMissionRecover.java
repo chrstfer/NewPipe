@@ -1,7 +1,6 @@
 package us.shandian.giga.get;
 
 import android.util.Log;
-
 import org.schabi.newpipe.extractor.NewPipe;
 import org.schabi.newpipe.extractor.StreamingService;
 import org.schabi.newpipe.extractor.exceptions.ExtractionException;
@@ -9,14 +8,13 @@ import org.schabi.newpipe.extractor.stream.AudioStream;
 import org.schabi.newpipe.extractor.stream.StreamExtractor;
 import org.schabi.newpipe.extractor.stream.SubtitlesStream;
 import org.schabi.newpipe.extractor.stream.VideoStream;
+import us.shandian.giga.get.DownloadMission.HttpError;
 
 import java.io.IOException;
 import java.io.InterruptedIOException;
 import java.net.HttpURLConnection;
 import java.nio.channels.ClosedByInterruptException;
 import java.util.List;
-
-import us.shandian.giga.get.DownloadMission.HttpError;
 
 import static us.shandian.giga.get.DownloadMission.ERROR_RESOURCE_GONE;
 

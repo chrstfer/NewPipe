@@ -1,12 +1,9 @@
 package org.schabi.newpipe.settings;
 
 import android.os.Bundle;
-
 import androidx.preference.Preference;
-
-import org.schabi.newpipe.R;
-
 import leakcanary.LeakCanary;
+import org.schabi.newpipe.R;
 
 public class DebugSettingsFragment extends BasePreferenceFragment {
     @Override

@@ -2,10 +2,8 @@ package org.schabi.newpipe;
 
 import android.content.Context;
 import android.database.Cursor;
-
 import androidx.annotation.NonNull;
 import androidx.room.Room;
-
 import org.schabi.newpipe.database.AppDatabase;
 
 import static org.schabi.newpipe.database.AppDatabase.DATABASE_NAME;
