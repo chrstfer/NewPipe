@@ -30,6 +30,7 @@ import androidx.core.widget.TextViewCompat;
 import androidx.fragment.app.FragmentManager;
 import androidx.preference.PreferenceManager;
 
+import org.jetbrains.annotations.NotNull;
 import org.schabi.newpipe.databinding.ListRadioIconItemBinding;
 import org.schabi.newpipe.databinding.SingleChoiceDialogViewBinding;
 import org.schabi.newpipe.download.DownloadDialog;
@@ -78,6 +79,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 
 import icepick.Icepick;
 import icepick.State;
@@ -94,7 +96,14 @@ import static org.schabi.newpipe.extractor.StreamingService.ServiceInfo.MediaCap
 
 /**
  * Get the url from the intent and open it in the chosen preferred player.
- */
+ * \/\*\*
+ *      * Oh is that what it's supposed to do?
+ *      I thought it handled the creation of many submenus and parsed human input from text controls;
+ *      all technically related to opening the preferred player *type* i suppose.
+ * \*\/
+ * */
+
+
 public class RouterActivity extends AppCompatActivity {
     protected final CompositeDisposable disposables = new CompositeDisposable();
     @State
@@ -127,10 +136,18 @@ public class RouterActivity extends AppCompatActivity {
                 ? R.style.RouterActivityThemeLight : R.style.RouterActivityThemeDark);
     }
 
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        handleUrl(currentUrl);
+    }
+
     @Override
     protected void onStop() {
         super.onStop();
-        // we need to dismiss the dialog before leaving the activity or we get leaks
+        // old: we need to dismiss the dialog before leaving the activity or we get leaks
+        // 20210818: shouldn't we wrap the dialogs and make them do this on their own as they go out of scope?
         if (alertDialogChoice != null) {
             alertDialogChoice.dismiss();
         }
@@ -143,19 +160,13 @@ public class RouterActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onStart() {
-        super.onStart();
-
-        handleUrl(currentUrl);
-    }
-
-    @Override
     protected void onDestroy() {
         super.onDestroy();
 
         disposables.clear();
     }
 
+    /** wut du i du? */
     private void handleUrl(final String url) {
         disposables.add(Observable
                 .fromCallable(() -> {
@@ -186,6 +197,21 @@ public class RouterActivity extends AppCompatActivity {
                     }
                 }, throwable -> handleError(this, new ErrorInfo(throwable,
                         UserAction.SHARE_TO_NEWPIPE, "Getting service from url: " + url))));
+    }
+
+    private void showUnsupportedUrlDialog(final String url) {
+        final Context context = getThemeWrapperContext();
+        new AlertDialog.Builder(context)
+                .setTitle(R.string.unsupported_url)
+                .setMessage(R.string.unsupported_url_dialog_message)
+                .setIcon(R.drawable.ic_share)
+                .setPositiveButton(R.string.open_in_browser,
+                        (dialog, which) -> ShareUtils.openUrlInBrowser(this, url))
+                .setNegativeButton(R.string.share,
+                        (dialog, which) -> ShareUtils.shareText(this, "", url)) // no subject
+                .setNeutralButton(R.string.cancel, null)
+                .setOnDismissListener(dialog -> finish())
+                .show();
     }
 
     /**
@@ -235,21 +261,7 @@ public class RouterActivity extends AppCompatActivity {
         }
     }
 
-    private void showUnsupportedUrlDialog(final String url) {
-        final Context context = getThemeWrapperContext();
-        new AlertDialog.Builder(context)
-                .setTitle(R.string.unsupported_url)
-                .setMessage(R.string.unsupported_url_dialog_message)
-                .setIcon(R.drawable.ic_share)
-                .setPositiveButton(R.string.open_in_browser,
-                        (dialog, which) -> ShareUtils.openUrlInBrowser(this, url))
-                .setNegativeButton(R.string.share,
-                        (dialog, which) -> ShareUtils.shareText(this, "", url)) // no subject
-                .setNeutralButton(R.string.cancel, null)
-                .setOnDismissListener(dialog -> finish())
-                .show();
-    }
-
+    // "success" from handling urls? my grandma's tv can do that too, what's to stop me from shoving that in this method's place?
     protected void onSuccess() {
         final SharedPreferences preferences = PreferenceManager
                 .getDefaultSharedPreferences(this);
@@ -257,14 +269,14 @@ public class RouterActivity extends AppCompatActivity {
                 .getString(getString(R.string.preferred_open_action_key),
                         getString(R.string.preferred_open_action_default));
 
-        final String showInfoKey = getString(R.string.show_info_key);
+        final String showInfoKey = getString(R.string.show_info_key); // TODO: make final dictionary, get values from db/schema, enum from const dict
         final String videoPlayerKey = getString(R.string.video_player_key);
         final String backgroundPlayerKey = getString(R.string.background_player_key);
         final String popupPlayerKey = getString(R.string.popup_player_key);
         final String downloadKey = getString(R.string.download_key);
         final String alwaysAskKey = getString(R.string.always_ask_open_action_key);
 
-        if (selectedChoiceKey.equals(alwaysAskKey)) {
+        if (selectedChoiceKey.equals(alwaysAskKey)) { // TODO: move most of this into handleChoice, and rename that shite
             final List<AdapterChoiceItem> choices
                     = getChoicesForService(currentService, currentLinkType);
 
@@ -293,17 +305,17 @@ public class RouterActivity extends AppCompatActivity {
             final boolean isAudioPlayerSelected = selectedChoiceKey.equals(backgroundPlayerKey);
 
             if (currentLinkType != LinkType.STREAM) {
-                if (isExtAudioEnabled && isAudioPlayerSelected
-                        || isExtVideoEnabled && isVideoPlayerSelected) {
-                    Toast.makeText(this, R.string.external_player_unsupported_link_type,
-                            Toast.LENGTH_LONG).show();
+                if ((isExtAudioEnabled && isAudioPlayerSelected) || (isExtVideoEnabled && isVideoPlayerSelected)) {
+                    Toast.makeText( this,
+                                            R.string.external_player_unsupported_link_type, // this is pretty arbitrary ...
+                                            Toast.LENGTH_LONG)
+                        .show();
                     handleChoice(showInfoKey);
                     return;
                 }
             }
 
-            final List<StreamingService.ServiceInfo.MediaCapability> capabilities
-                    = currentService.getServiceInfo().getMediaCapabilities();
+            final List<StreamingService.ServiceInfo.MediaCapability> capabilities = currentService.getServiceInfo().getMediaCapabilities();
 
             boolean serviceSupportsChoice = false;
             if (isVideoPlayerSelected) {
@@ -318,19 +330,17 @@ public class RouterActivity extends AppCompatActivity {
                 handleChoice(showInfoKey);
             }
         }
-    }
+    } // way too many ifs and clearly almost all of this should be in handleChoice
 
-    private void showDialog(final List<AdapterChoiceItem> choices) {
-        final SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+    private void showDialog(@NotNull final List<AdapterChoiceItem> choices) {
+        final SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this); // shouldn't this be a router-level variable or even a submodule on its own?
         final Context themeWrapperContext = getThemeWrapperContext();
 
         final LayoutInflater inflater = LayoutInflater.from(themeWrapperContext);
-        final RadioGroup radioGroup = SingleChoiceDialogViewBinding.inflate(getLayoutInflater())
-                .list;
+        final RadioGroup radioGroup = SingleChoiceDialogViewBinding.inflate(getLayoutInflater()).list;
 
         final DialogInterface.OnClickListener dialogButtonsClickListener = (dialog, which) -> {
-            final int indexOfChild = radioGroup.indexOfChild(
-                    radioGroup.findViewById(radioGroup.getCheckedRadioButtonId()));
+            final int indexOfChild = radioGroup.indexOfChild(radioGroup.findViewById(radioGroup.getCheckedRadioButtonId()));
             final AdapterChoiceItem choice = choices.get(indexOfChild);
 
             handleChoice(choice.key);
@@ -379,7 +389,7 @@ public class RouterActivity extends AppCompatActivity {
 
         int id = 12345;
         for (final AdapterChoiceItem item : choices) {
-            final RadioButton radioButton = ListRadioIconItemBinding.inflate(inflater).getRoot();
+            final RadioButton radioButton = ListRadioIconItemBinding.inflate(inflater).getRoot(); // also, why are we controlling the UI from "RouterActivity", isnt this supposed to be a model?
             radioButton.setText(item.description);
             TextViewCompat.setCompoundDrawablesRelativeWithIntrinsicBounds(radioButton,
                     AppCompatResources.getDrawable(themeWrapperContext, item.icon),
@@ -417,9 +427,10 @@ public class RouterActivity extends AppCompatActivity {
         if (DeviceUtils.isTv(this)) {
             FocusOverlayView.setupFocusObserver(alertDialogChoice);
         }
-    }
+    }  // seriously, lets get all this UI stuff out of here. Sibling class or something to quarantine, but out tf of this router mfer
 
-    private List<AdapterChoiceItem> getChoicesForService(final StreamingService service,
+    @NotNull
+    private List<AdapterChoiceItem> getChoicesForService(@NotNull final StreamingService service,
                                                          final LinkType linkType) {
         final Context context = getThemeWrapperContext();
 
@@ -497,16 +508,15 @@ public class RouterActivity extends AppCompatActivity {
     }
 
     private Context getThemeWrapperContext() {
-        return new ContextThemeWrapper(this, ThemeHelper.isLightThemeSelected(this)
-                ? R.style.LightTheme : R.style.DarkTheme);
+        return new ContextThemeWrapper(this,
+                                        ThemeHelper.isLightThemeSelected(this) ? R.style.LightTheme : R.style.DarkTheme);
     }
 
-    private void setDialogButtonsState(final AlertDialog dialog, final boolean state) {
+    private void setDialogButtonsState(final AlertDialog dialog, final boolean state) { // wtf is this m8
         final Button negativeButton = dialog.getButton(DialogInterface.BUTTON_NEGATIVE);
         final Button positiveButton = dialog.getButton(DialogInterface.BUTTON_POSITIVE);
-        if (negativeButton == null || positiveButton == null) {
+        if ( ! Objects.isNull(negativeButton)  && ! Objects.isNull(positiveButton) )
             return;
-        }
 
         negativeButton.setEnabled(state);
         positiveButton.setEnabled(state);
