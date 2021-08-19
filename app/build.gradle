@@ -15,8 +15,8 @@ android {
     defaultConfig {
         applicationId "org.schabi.newpipe"
         resValue "string", "app_name", "NewPipe"
-        minSdkVersion 19
-        targetSdkVersion 29
+        minSdkVersion 24 // resizable activity doesnt enter api until lvl24
+        targetSdkVersion 29 // TODO: swap to 30/31?
         versionCode 974
         versionName "0.21.8"
 
